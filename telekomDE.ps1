@@ -2,10 +2,10 @@ $url = "https://pass.telekom.de/api/service/generic/v1/status"
 try {
     $telekomstuff = Invoke-RestMethod -Uri $url -Method Get
 } catch {
-    $telekomstuff = "<html>" 
+    $telekomstuff = "<!DOCTYPE html>" 
 }
 
-if(!($telekomstuff -Match "<html>")){
+if(!($telekomstuff -Match "<!DOCTYPE html>")){
     $usedPercentage = $telekomstuff.usedPercentage
     $usedVolumeStr = $telekomstuff.usedVolumeStr
     $remaniningTimeStr = $telekomstuff.remainingTimeStr
