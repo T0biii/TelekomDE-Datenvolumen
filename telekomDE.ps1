@@ -2,16 +2,19 @@ $url = "https://pass.telekom.de/api/service/generic/v1/status"
 try {
     $telekomstuff = Invoke-RestMethod -Uri $url -Method Get
 } catch {
-    $telekomstuff = "<!DOCTYPE html>" 
+    $telekomstuff = "<html>" 
 }
 
-if(!($telekomstuff -Match "<!DOCTYPE html>")){
+if(!($telekomstuff -Match "<html>")){
     $usedPercentage = $telekomstuff.usedPercentage
     $usedVolumeStr = $telekomstuff.usedVolumeStr
     $remaniningTimeStr = $telekomstuff.remainingTimeStr
     $initialVolumeStr = $telekomstuff.initialVolumeStr
     $Volumenleft = $telekomstuff.initialVolume - $telekomstuff.usedVolume
     $VolumenleftGB = $Volumenleft / 1GB
+    Clear-Host
+
+    Write-Host "Current Time:"$(Get-Date -Format "HH:mm:ss") -ForegroundColor Green
     Write-Host "Initial Volume: $initialVolumeStr" -ForegroundColor Green
     Write-host "Used: $usedVolumeStr" -ForegroundColor Green
     Write-Host "Used in Percentage: $usedPercentage%" -ForegroundColor Green
