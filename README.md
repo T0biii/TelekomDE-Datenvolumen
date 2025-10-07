@@ -3,6 +3,7 @@ Powershell script to query Telekom DE data volume
 
 # Screenshots
 <img width="310" height="159" alt="image" src="https://github.com/user-attachments/assets/856a471c-698b-4ff8-81ff-73d6849b80b9" />
+<img width="320" height="140" alt="image" src="https://github.com/user-attachments/assets/174b1723-2f84-4bad-9865-c25eab1c72be" />
 
 ## Telekom Data Usage – PowerShell Script
 
