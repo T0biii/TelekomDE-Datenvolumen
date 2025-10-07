@@ -81,3 +81,7 @@ Ihr Telekom Datentarif:
   "passType": 103
 }
 ```
+
+# Credits
+I’d like to give credit to a random blog post I found, which made this project possible, as well as to a comment from Daniel for the API URL
+https://wp.jochen.hayek.name/blog-de/2016/04/08/wenn-einem-programmierer-beim-abruf-von-pass-telekom-de-langweilig-wird/
