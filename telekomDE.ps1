@@ -12,8 +12,12 @@ if(!($telekomstuff -Match "<html>")){
     $initialVolumeStr = $telekomstuff.initialVolumeStr
     $Volumenleft = $telekomstuff.initialVolume - $telekomstuff.usedVolume
     $VolumenleftGB = $Volumenleft / 1GB
+    $passname = $telekomstuff.passName
     Clear-Host
-
+    
+    if($passname){
+      Write-Host "Passname: $passname" -ForegroundColor Green
+    }
     Write-Host "Current Time:"$(Get-Date -Format "HH:mm:ss") -ForegroundColor Green
     Write-Host "Initial Volume: $initialVolumeStr" -ForegroundColor Green
     Write-host "Used: $usedVolumeStr" -ForegroundColor Green
