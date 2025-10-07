@@ -27,3 +27,57 @@ um den aktuellen Verbrauchsstatus des mobilen Datenpasses auszulesen.
 - Zeigt **Passname**, **Startvolumen**, **verbrauchtes Volumen**, **Prozentanteil**, **Restvolumen in GB** und **Restzeit** an.
 - Gibt eine Warnung aus, wenn keine mobile Datenverbindung besteht.
 
+# API Respons
+
+Datenbonus
+```json
+{
+  "sessionState": 0,
+  "nextUpdate": 10800,
+  "subscriptions": [
+    "speedon",
+    "roamLikeHome",
+    "tns",
+    "tnsBasicRoaming"
+  ],
+  "title": "",
+  "passName": "Datenbonus",
+  "passStage": 1,
+  "validityPeriod": 2,
+  "initialVolume": 4294967296,
+  "initialVolumeStr": "4 GB",
+  "usedVolume": 4279463299,
+  "usedPercentage": 100,
+  "usedVolumeStr": "3,98 GB",
+  "usedAt": 1759877673000,
+  "remainingSeconds": 2073906,
+  "remainingTimeStr": "24 Tage 00 Std.",
+  "passType": 101
+}
+```
+Ihr Telekom Datentarif:
+```json
+{
+  "sessionState": 0,
+  "nextUpdate": 10800,
+  "subscriptions": [
+    "speedon",
+    "roamLikeHome",
+    "tns",
+    "tnsBasicRoaming"
+  ],
+  "title": "",
+  "passName": "Ihr Telekom Datentarif",
+  "passStage": 1,
+  "validityPeriod": 2,
+  "initialVolume": 64424509440,
+  "initialVolumeStr": "60 GB",
+  "usedVolume": 1561061456,
+  "usedPercentage": 3,
+  "usedVolumeStr": "1,45 GB",
+  "usedAt": 1759877719000,
+  "remainingSeconds": 2073351,
+  "remainingTimeStr": "23 Tage 23 Std.",
+  "passType": 103
+}
+```
